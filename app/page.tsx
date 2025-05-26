@@ -1,12 +1,14 @@
 import { ChartContainer } from "@/components/chart-container"
-import { getChartData, ChartDataPoint } from "@/lib/data"
+import { ThemeToggle } from "@/components/ui/theme-toggle"
 
 export default function Page() {
-  const chartData = getChartData();
-
   return (
     <main className="container mx-auto p-4">
-      <ChartContainer data={chartData} />
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-2xl font-bold">Crypto Chart</h1>
+        <ThemeToggle />
+      </div>
+      <ChartContainer />
     </main>
   )
 }
